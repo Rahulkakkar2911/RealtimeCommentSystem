@@ -17,7 +17,6 @@ const debounce = function(func, timer){
         func();
     },timer)
 }
-
 const appendToDom = function(data){
     const litag = `
     <li class="comment">
@@ -51,9 +50,9 @@ const postComment = function(comment){
     // taaki aur logo tk pahuche
     broadcastComment(data);
     //sync with mdb
+    syncWithDB(data);
+
 }
-
-
 const commentBox = document.querySelector('.comment-box');
 
 submitBtn.addEventListener('click', (e)=>{
@@ -70,10 +69,30 @@ socket.on('comment', (data) => {
     appendToDom(data);
 })
 socket.on('typing', (data)=>{
-    console.log(`${data.username} is typing...`);
     //after the events stops coming, after the below given time we will clear the text
     debounce(function(){
         typingDiv.innerText = '';
     },1000);
     typingDiv.innerText = `${data.username} is typing...`;
 });
+//API CALLS
+async function syncWithDB(data){
+    const headers = {
+        'Content-Type': 'application/json'
+    }
+    const res = await fetch('/api/comments', {
+        method:"POST",
+        body:JSON.stringify(data),
+        headers
+    });
+    const resfinal = await res.json();
+}
+async function fetchComments(){
+    const res =  await fetch('/api/comments/');
+    const resfinal = await res.json();
+    resfinal.forEach(cmnt => {
+        cmnt.time = cmnt.createdAt;
+        appendToDom(cmnt);
+    });
+}
+window.addEventListener('load', fetchComments);
