@@ -1,15 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Realtime Comment System</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>Hello RCS</h1>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h3>
+            Realtime Comment System using <code>NodeJS</code>,
+            <code>Express</code>, <code>Mongo DB</code>,
+            <code>Vanilla javascript</code>, <code>Socket.io</code>
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            exercitationem quidem nemo dolor ab qui ducimus laboriosam cum,
+            maiores cumque et ratione nihil rem necessitatibus neque modi
+            corporis error doloremque?Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Nihil fugiat ut, accusantium corporis maxime
+            minus, dicta, aliquid quisquam praesentium quam quis. Maiores id
+            consectetur neque at, ex magnam itaque sint. Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. Ipsam incidunt, consequatur sunt
+            facere optio explicabo ut vitae minima fugit, cupiditate eius
+            laudantium saepe officia officiis molestias minus. Atque, sequi
+            excepturi.
+          </p>
+          <div class="row">
+            <div class="col-md-12">
+                <h4 class="border-bottom pb-2">Comments</h4>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">Write a comment</label>
+                    <textarea class="form-control" id="textarea" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button class="btn btn-primary">Post Comment</button>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12 mt-4">
+              <ul class="comment-box">
+                  <li class="comment">
+                      <div class="card border-light mb-3">
+                          <div class="card-body">
+                              <h6>John Doe</h6>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat inventore amet dicta accusantium tempore id iste earum cupiditate dolores voluptates.</p>
+                              <div>
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                    </span>
+                                    <small>11:30PM</small>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="comment">
+                    <div class="card border-light mb-3">
+                        <div class="card-body">
+                            <h6>John Doe</h6>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat inventore amet dicta accusantium tempore id iste earum cupiditate dolores voluptates.</p>
+                            <div>
+                              <span class="material-symbols-outlined">
+                                  schedule
+                                  </span>
+                                  <small>11:30PM</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="comment">
+                    <div class="card border-light mb-3">
+                        <div class="card-body">
+                            <h6>John Doe</h6>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat inventore amet dicta accusantium tempore id iste earum cupiditate dolores voluptates.</p>
+                            <div>
+                              <span class="material-symbols-outlined">
+                                  schedule
+                                  </span>
+                                  <small>11:30PM</small>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+              </ul>
+          </div>
+      </div>
+    </div>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

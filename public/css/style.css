@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: whitesmoke;
+    -webkit-font-smoothing: antialised;
+    font-family: 'Poppins', sans-serif;
+}
+.btn{
+    margin-top: 10px;
+    float: right;
+}
+.comment-box{
+    list-style-type: none;
+    padding: 0;
+}
+.comment-box .comment h6{
+    font-weight: 800;
+}
+p{
+    font-size: 16px;
+}
+.comment-box .comment span, .comment-box .comment small{
+    line-height: 2px;
+    vertical-align: middle;
+}
