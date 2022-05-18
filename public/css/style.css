@@ -26,3 +26,16 @@ p{
     line-height: 2px;
     vertical-align: middle;
 }
+.comment {
+    animation: slidein 0.6s ease forwards;
+}
+@keyframes slidein {
+    0%{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
